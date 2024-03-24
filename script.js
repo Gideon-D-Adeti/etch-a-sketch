@@ -1,1 +1,1 @@
-const containerElement = document.querySelector("#container");
+const sketchArea = document.querySelector("#sketch");
