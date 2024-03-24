@@ -1,5 +1,16 @@
-/* Import Roboto font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital@0;1&display=swap');
+
+/* Color definitions */
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #daa520;
+    --screen-color: #ccc;
+    --screen-border: #c0c0c0;
+    --frame-color: #ff0000;
+    --knob-color: #fff;
+}
 
 /* General styling */
 html {
@@ -12,4 +23,82 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Great Vibes", cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#container {
+    background-color: var(--frame-color);
+    padding: 12px 64px;
+    border-radius: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#button {
+    color: var(--frame-color);
+    background-color: var(--text-color);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius:32px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: max-content;
+    margin: 0 auto 8px auto;
+}
+
+#button:hover {
+    transform: scale(1.05);
+}
+
+#sketch {
+    background-color: var(--screen-color);
+    border: 4px solid var(--screen-border);
+    width: 480px;
+    height: 480px;
+    border-radius: 32px;
+    margin-bottom: 16px;
+}
+
+#control-panel {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.knob {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--knob-color);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-image: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.5), transparent);
+    border: 2px dotted rgba(0, 0, 0, 0.2);
+}
+
+
+#info-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    font-size: 48px;
+}
+
+#author {
+    font-size: 24px;
 }
