@@ -18,7 +18,24 @@ function generateGrid(gridSize) {
     box.style.border = "1px solid #000";
 
     sketchArea.appendChild(box);
+
+    // Add event listener for coloring on hover
+    box.addEventListener("mouseenter", () => {
+      if (box.style.backgroundColor === "rgb(255, 255, 255)") {
+        box.style.backgroundColor = getRandomColor();
+      }
+    });
   }
+}
+
+// Function to get random color
+function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
 
 // Initial grid generation
