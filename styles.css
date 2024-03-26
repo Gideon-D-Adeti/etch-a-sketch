@@ -6,10 +6,8 @@
 :root {
     --background-color: #f0f0f0;
     --text-color: #daa520;
-    --screen-color: #ccc;
-    --screen-border: #c0c0c0;
+    --screen-and-knob-color: #fff;
     --frame-color: #ff0000;
-    --knob-color: #fff;
 }
 
 /* General styling */
@@ -60,16 +58,19 @@ body {
 }
 
 #button:hover {
-    transform: scale(1.05);
+    transform: scale(1.025);
 }
 
 #sketch {
-    background-color: var(--screen-color);
-    border: 4px solid var(--screen-border);
+    background-color: var(--screen-and-knob-color);
     width: 480px;
     height: 480px;
-    border-radius: 32px;
+    border: 1px solid #000;
     margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 #control-panel {
@@ -82,10 +83,10 @@ body {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background-color: var(--knob-color);
+    background-color: var(--screen-and-knob-color);
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
     background-image: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.5), transparent);
-    border: 2px dotted rgba(0, 0, 0, 0.2);
+    border: 2px dotted rgba(0, 0, 0, 0.3);
 }
 
 
