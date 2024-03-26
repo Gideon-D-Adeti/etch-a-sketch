@@ -15,7 +15,6 @@ function generateGrid(gridSize) {
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
     box.style.backgroundColor = "#fff";
-    box.style.border = "1px solid #000";
 
     sketchArea.appendChild(box);
 
