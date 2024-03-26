@@ -23,3 +23,14 @@ function generateGrid(gridSize) {
 
 // Initial grid generation
 generateGrid(gridSize);
+
+// Event listener for changing grid size
+changeGridSizeButton.addEventListener("click", () => {
+  let newSize;
+  do {
+    newSize = +prompt("Enter any number from 1 to 100:");
+  } while (isNaN(newSize) || newSize < 1 || newSize > 100);
+
+  gridSize = newSize;
+  generateGrid(gridSize);
+});
